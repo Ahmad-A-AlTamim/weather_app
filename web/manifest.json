@@ -1,6 +1,6 @@
 {
-    "name": "weather_app",
-    "short_name": "weather_app",
+    "name": "weather_applecation",
+    "short_name": "weather_applecation",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
