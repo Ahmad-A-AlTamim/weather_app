@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -23,7 +25,7 @@ class SearchPage extends StatelessWidget {
             onSubmitted: (value) async {
               WeatherDataStatus w =
                   await WeatherServices().getCurrentWeather(cityName: value);
-              log(w.cityName + " " + w.maxTemp.toString() + "hh");
+              log("${w.cityName} ${w.maxTemp}hh");
             },
             decoration: InputDecoration(
               contentPadding: const EdgeInsets.all(20),

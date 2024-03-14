@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, file_names, avoid_init_to_null
+
 import 'package:dio/dio.dart';
 import 'package:weather_applecation/modules/WeatherStatusData.dart';
 import 'dart:developer';
