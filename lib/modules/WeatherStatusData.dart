@@ -16,12 +16,12 @@ class WeatherDataStatus {
   factory WeatherDataStatus.fromJsom(Json, String imagePath) {
     return WeatherDataStatus(
       imgUrl: imagePath,
-      cityName: Json["location"]["name"],
-      updatedDate: Json["current"]["last_updated"],
-      weatherStatus: Json["current"]["condition"]["text"],
-      avgTemp: Json["forecast"]["forecastday"][0]["day"]["avgtemp_c"],
-      maxTemp: Json["forecast"]["forecastday"][0]["day"]["maxtemp_c"],
-      minTemp: Json["forecast"]["forecastday"][0]["day"]["mintemp_c"],
+      cityName: Json["location"]["name"] ?? "Null",
+      updatedDate: Json["current"]["last_updated"] ?? "Null",
+      weatherStatus: Json["current"]["condition"]["text"] ?? "Null",
+      avgTemp: Json["forecast"]["forecastday"][0]["day"]["avgtemp_c"] ?? 0,
+      maxTemp: Json["forecast"]["forecastday"][0]["day"]["maxtemp_c"] ?? 0,
+      minTemp: Json["forecast"]["forecastday"][0]["day"]["mintemp_c"] ?? 0,
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:weather_applecation/modules/WeatherStatusData.dart';
+import 'package:weather_applecation/services/WearherSearvice.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -18,8 +20,10 @@ class SearchPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: TextField(
             onChanged: (value) {},
-            onSubmitted: (value) {
-              log(value);
+            onSubmitted: (value) async {
+              WeatherDataStatus w =
+                  await WeatherServices().getCurrentWeather(cityName: value);
+              log(w.cityName + " " + w.maxTemp.toString() + "hh");
             },
             decoration: InputDecoration(
               contentPadding: const EdgeInsets.all(20),
